@@ -67,23 +67,31 @@ public class TBExpt {
     TextBlock centered_gb = new Centered(block_gb, 9);
     TBUtils.print(pen, centered_gb);    
     
-   // Centered text blocks
+   // Boxed centered text blocks
     TextBlock bcentered_hello = new BoxedBlock(centered_hello);
     TBUtils.print(pen, bcentered_hello);
     TextBlock bcentered_gb = new BoxedBlock(centered_gb);
     TBUtils.print(pen, bcentered_gb);     
 
-    // Centered text blocks
+    // Right-justified text blocks
     TextBlock rj_hello = new RightJustified(block_hello, 9);
     TBUtils.print(pen, rj_hello);
     TextBlock rj_gb = new RightJustified(block_gb, 9);
     TBUtils.print(pen, rj_gb);   
     
-    // Centered text blocks
+    // Boxed right-justified text blocks
     TextBlock brj_hello = new BoxedBlock(rj_hello);
     TBUtils.print(pen, brj_hello);
     TextBlock brj_gb = new BoxedBlock(rj_gb);
     TBUtils.print(pen, brj_gb);  
+
+    // Horrizontally flipped block
+    TextBlock hflipped_hello = new HorizontallyFlipped(block_hello);
+    TBUtils.print(pen, hflipped_hello);
+
+    // Horrizontally flipped block
+    TextBlock vflipped_hello_gb = new VerticallyFlipped(vcompose_hello_gb);
+    TBUtils.print(pen, vflipped_hello_gb);
 
     pen.close();
   } // main(String[])
