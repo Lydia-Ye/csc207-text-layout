@@ -41,16 +41,49 @@ public class TBExpt {
     TextBlock vcompose_hello_gb = new VComposition(block_hello, block_gb);
     TextBlock boxed_vcomposed_blocks = new BoxedBlock(vcompose_hello_gb);
     TBUtils.print(pen, boxed_vcomposed_blocks);
-
     TextBlock boxed_gb = new BoxedBlock(block_gb);
     TextBlock vcompose_boxed_blocks = new VComposition(boxed_hello, boxed_gb);
     TBUtils.print(pen, vcompose_boxed_blocks);
-
     TextBlock hcompose_bhello_gb = new HComposition(boxed_hello, block_gb);
     TBUtils.print(pen, hcompose_bhello_gb);
-
     TextBlock hcompose_hello_bgb = new HComposition(block_gb, boxed_hello);
     TBUtils.print(pen, hcompose_hello_bgb);
+
+    // Truncate text blocks
+    TextBlock truncated_hello = new Truncated(block_hello, 10);
+    TBUtils.print(pen, truncated_hello);
+    TextBlock truncated_gb = new Truncated(block_gb, 5);
+    TBUtils.print(pen, truncated_gb);    
+    
+    // Truncate boxed blocks
+    TextBlock truncated_bhello = new Truncated(boxed_hello, 4);
+    TBUtils.print(pen, truncated_bhello);
+    TextBlock truncated_bgb = new Truncated(boxed_gb, 10);
+    TBUtils.print(pen, truncated_bgb);    
+
+   // Centered text blocks
+    TextBlock centered_hello = new Centered(block_hello, 9);
+    TBUtils.print(pen, centered_hello);
+    TextBlock centered_gb = new Centered(block_gb, 9);
+    TBUtils.print(pen, centered_gb);    
+    
+   // Centered text blocks
+    TextBlock bcentered_hello = new BoxedBlock(centered_hello);
+    TBUtils.print(pen, bcentered_hello);
+    TextBlock bcentered_gb = new BoxedBlock(centered_gb);
+    TBUtils.print(pen, bcentered_gb);     
+
+    // Centered text blocks
+    TextBlock rj_hello = new RightJustified(block_hello, 9);
+    TBUtils.print(pen, rj_hello);
+    TextBlock rj_gb = new RightJustified(block_gb, 9);
+    TBUtils.print(pen, rj_gb);   
+    
+    // Centered text blocks
+    TextBlock brj_hello = new BoxedBlock(rj_hello);
+    TBUtils.print(pen, brj_hello);
+    TextBlock brj_gb = new BoxedBlock(rj_gb);
+    TBUtils.print(pen, brj_gb);  
 
     pen.close();
   } // main(String[])
