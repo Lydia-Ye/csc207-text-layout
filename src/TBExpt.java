@@ -93,6 +93,9 @@ public class TBExpt {
     TextBlock vflipped_hello_gb = new VerticallyFlipped(vcompose_hello_gb);
     TBUtils.print(pen, vflipped_hello_gb);
 
+    TextBlock add_space_to_hello = new AddSpaces(block_hello);
+    TBUtils.print(pen, add_space_to_hello);
+
     pen.close();
   } // main(String[])
 
