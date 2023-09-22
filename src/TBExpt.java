@@ -96,6 +96,15 @@ public class TBExpt {
     TextBlock add_space_to_hello = new AddSpaces(block_hello);
     TBUtils.print(pen, add_space_to_hello);
 
+    TextBlock a = block_hello;
+    TextBlock b = block_hello;
+    pen.println(block_hello);
+    pen.println(a);
+    pen.println(b);
+    pen.println(block_gb);
+
+    pen.println(TBUtils.eqv(a,boxed_gb));
+
     pen.close();
   } // main(String[])
 
