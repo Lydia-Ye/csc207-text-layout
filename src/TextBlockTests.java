@@ -66,4 +66,26 @@ public class TextBlockTests {
     assertEquals(rj_hello1.width(), 9);
   } // sampleSuccessfulTest()
 
+  /**
+   * A test of spaced block
+   */
+  @Test
+  void addSpaceTest() throws Exception {
+    TextBlock block_hello = new TextLine("Hello");
+    TextBlock add_space_to_hello = new AddSpaces(block_hello);
+    assertEquals(add_space_to_hello.row(0), "H e l l o");
+    assertEquals(add_space_to_hello.width(), 9);
+  } // sampleSuccessfulTest()
+
+  /**
+   * A test of spaced block
+   */
+  @Test
+  void hFlippedTest() throws Exception {
+    TextBlock block_hello = new TextLine("Hello");
+    TextBlock hflipped_hello = new HorizontallyFlipped(block_hello);
+    assertEquals(hflipped_hello.row(0), "olleH");
+    assertEquals(hflipped_hello.width(), block_hello.width());
+  } // sampleSuccessfulTest()
+
 } // class TestSampleMethods
