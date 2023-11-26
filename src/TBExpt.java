@@ -15,8 +15,8 @@ public class TBExpt {
     // Prepare for input and output
     PrintWriter pen = new PrintWriter(System.out, true);
 
-    TextBlock block1 = new TextLine("This is a test.");
-    TBUtils.print(pen,block1);
+    TextBlock blockLine = new TextLine("This is a test.");
+    TBUtils.print(pen,blockLine);
 
     // Create a block to use
     TextBlock block_hello = new TextLine("Hello");
