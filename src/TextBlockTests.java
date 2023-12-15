@@ -1,5 +1,4 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +9,19 @@ import org.junit.jupiter.api.Test;
  * @author Lydia Ye
  */
 public class TextBlockTests {
+
+  /**
+   *A test of empty text blocks
+   */
+  @Test
+  void emptyTBTest() throws Exception {
+    TextBlock emptyBlock = new TextLine("");
+    TextBlock eoxedEmptyTB = new BoxedBlock(emptyBlock);
+
+    assertEquals(eoxedEmptyTB.row(0), "++");
+    assertEquals(eoxedEmptyTB.row(1), "||");
+    assertEquals(eoxedEmptyTB.row(2), "++");
+  } // emptyTBTest()
   
   /**
    * A test of Truncated text line
@@ -159,4 +171,4 @@ public class TextBlockTests {
     assertEquals(vflipped_hello_gb.width(), vcompose_hello_gb.width());
     assertEquals(vflipped_hello_gb.height(), vcompose_hello_gb.height());
   } // vFlippedTest()
-} // class TestSampleMethods
+} // class TextBlockTests()
