@@ -4,7 +4,7 @@ Author: Lydia Ye
 
 Date: Sept. 21, 2023
 
-This repository contains classes that work with different types of text blocks.
+This is a course project for CSC207 Objected Oriented Problem Solving. This repository contains classes that work with different types of text blocks.
 
 
 ## References
